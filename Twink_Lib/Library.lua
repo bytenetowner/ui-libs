@@ -179,6 +179,12 @@ function UILibrary.Load(GUITitle)
 	NewInstance.Name = GUITitle
 	NewInstance.Parent = TargetedParent
 	
+	UserInputService.InputBegan:Connect(function(Input, GameProcessed)
+		if not GameProcessed and Input.KeyCode == Enum.KeyCode.Delete then
+			NewInstance.Enabled = not NewInstance.Enabled
+		end
+	end)
+	
 	ContainerFrame = Frame()
 	ContainerFrame.Name = "ContainerFrame"
 	ContainerFrame.Size = UDim2.new(0,500,0,300)
