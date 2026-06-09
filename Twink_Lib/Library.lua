@@ -151,6 +151,7 @@ local function TextLabel(Text, Size)
 	NewTextLabel.TextColor3 = Color3.fromRGB(255,255,255)
 	NewTextLabel.BackgroundTransparency = 1
 	NewTextLabel.TextSize = Size or 12
+	NewTextLabel.TextTransparency = 0.5
 	NewTextLabel.Size = UDim2.new(1,0,1,0)
 	NewTextLabel.ZIndex = Level
 	return NewTextLabel
