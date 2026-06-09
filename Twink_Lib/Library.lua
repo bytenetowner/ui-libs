@@ -431,14 +431,8 @@ function UILibrary.Load(GUITitle)
 			LabelContainer.BackgroundTransparency = 1
 			LabelContainer.Parent = DisplayPage
 			
-			local LabelForeground = RoundBox(5)
-			LabelForeground.Name = "LabelForeground"
-			LabelForeground.ImageColor3 = Color3.fromRGB(45,45,45)
-			LabelForeground.Size = UDim2.new(1,0,1,0)
-			LabelForeground.Parent = LabelContainer
-			
 			local HiddenLabel = TextLabel(Text, 12)
-			HiddenLabel.Parent = LabelForeground
+			HiddenLabel.Parent = LabelContainer
 		end
 		
 		function PageLibrary.AddDropdown(Text, ConfigurationArray, Callback)
